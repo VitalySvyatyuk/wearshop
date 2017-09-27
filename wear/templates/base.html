@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wear Shop</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href={% static 'css/style.css' %}>
+  <script src={% static 'js/script.js' %}></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4"><img class="select" src={% static 'img/select.png' %}></div>
+      <div class="to-center col-xs-4"><img class="logo" src={% static 'img/logo.png' %}></div>
+      <div class="cart-div to-right col-xs-4">
+        <img class="search" src={% static 'img/search.png' %}>
+        <a class="main-link" href=#>MY ACCOUNT</a>
+        <span class="main-link">|</span>
+        <a class="main-link" href=#>CART</a>
+      </div>
+    </div>
+    <div class="row goods">
+      <div class="col-xs-6 bold">MEN'S SHOES</div>
+      <div class="to-right col-xs-6">
+        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sort By <span class="caret"></span>
+        </button>
+      </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+</html>
